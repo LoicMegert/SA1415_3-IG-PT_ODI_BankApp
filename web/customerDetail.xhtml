@@ -44,6 +44,9 @@
                     <f:facet name="header"><h:outputText value="#{message.rate}"/></f:facet>
                         #{acc.rate}
                 </h:column>
+                <h:column>
+                    <h:commandLink value="#{message.show}" action="#{AccountDetailBean.getAccount(CustomerDetailBean.customer, acc)}"/>
+                </h:column>
             </h:dataTable>
             <br/>
             <h:commandButton id="Return" value="#{message.return.home}" action="return"/>
