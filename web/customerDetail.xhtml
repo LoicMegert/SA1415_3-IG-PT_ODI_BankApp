@@ -49,6 +49,8 @@
                 </h:column>
             </h:dataTable>
             <br/>
+            <h:commandButton id="Add" value="#{message.add}" action="#{AccountCreateBean.getCustomer(CustomerDetailBean.customer)}"/>
+            <br/><br/>
             <h:commandButton id="Return" value="#{message.returnHome}" action="return"/>
         </h:form>
     </h:body>
