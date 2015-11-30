@@ -9,31 +9,65 @@ import java.util.*;
  */
 public class Customer {
 
-    private Collection<Account> accounts;
+    /** La liste des comptes possédés par ce client. */
+    private Map<String, Account> accounts;
+    /** Le numéro du client. */
     private int number;
+    /** Le prénom du client. */
     private String firstName;
+    /** Le nom du client. */
     private String lastName;
 
+    /**
+     * Permet d'obtenir le numéro du client.
+     * 
+     * @return Le numéro du client.
+     */
     public int getNumber() {
         return this.number;
     }
 
+    /**
+     * Modifie le numéro du client par celui passé en paramètre.
+     * 
+     * @param number Le nouveau numéro du client.
+     */
     public void setNumber(int number) {
         this.number = number;
     }
 
+    /**
+     * Permet d'obtenir le prénom du client.
+     * 
+     * @return Le prénom du client.
+     */
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     * Modifie le prénom du client par celui passé en paramètre.
+     * 
+     * @param firstName Le nouveau prénom du client.
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     * Permet d'obtenir le nom du client.
+     * 
+     * @return Le nom du client.
+     */
     public String getLastName() {
         return this.lastName;
     }
 
+    /**
+     * Modifie le nom du client par celui passé en paramètre.
+     * 
+     * @param lastName Le nouveau nom du client.
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -62,7 +96,7 @@ public class Customer {
         this.number = number;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.accounts = new ArrayList();
+        this.accounts = new HashMap<>();
     }
 
     /**
@@ -72,16 +106,7 @@ public class Customer {
      * @return Le compte recherché ou null s'il n'existe pas.
      */
     public Account getAccountByNumber(final String number) {
-        Account account = null;
-        
-        for (Account acc : this.accounts) {
-            if (acc.getNumber().equals(number)) {
-                account = acc;
-                break;
-            }
-        }
-        
-        return account;
+        return this.accounts.get(number);
     }
 
     /**
@@ -90,9 +115,17 @@ public class Customer {
      * @param number Le numéro du compte.
      * @param name Le nom du compte.
      * @param rate Le taux d'intérêt du compte.
+     * @return Le compte créé ou null s'il existe déjà.
      */
-    public void addAccount(final String number, final String name, final double rate) {
-        this.accounts.add(new Account(number, name, rate, this));
+    public Account addAccount(final String number, final String name, final double rate) {
+        if(!accounts.containsKey(number)) {
+            Account account = new Account(number, name, rate, this);
+            this.accounts.put(number, account);
+            
+            return account;
+        } else {
+            return null;
+        }
     }
 
 }

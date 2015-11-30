@@ -7,40 +7,85 @@ package ch.hearc.ig.odi.bankapp.business;
  */
 public class Account {
 
+    /** Le propriétaire du compte. */
     private Customer customer;
+    /** Le numéro du compte. */
     private String number;
+    /** Le nom du compte. */
     private String name;
+    /** Le solde du compte. Par défaut : 0 */
     private double balance = 0;
+    /** Le taux d'intérêt du compte. Par défaut : 0.001 */
     private double rate = 0.001;
 
+    /**
+     * Permet d'obtenir le numéro du compte.
+     * 
+     * @return Le numéro du compte.
+     */
     public String getNumber() {
         return this.number;
     }
 
+    /**
+     * Modifie le numéro du compte par celui passé en paramètre.
+     * 
+     * @param number Le nouveau numéro du compte.
+     */
     public void setNumber(String number) {
         this.number = number;
     }
 
+    /**
+     * Permet d'obtenir le nom du compte.
+     * 
+     * @return Le nom du compte.
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Modifie le nom du compte par celui passé en paramètre.
+     * 
+     * @param name Le nouveau nom du compte.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Permet d'obtenir le solde du compte.
+     * 
+     * @return Le solde du compte.
+     */
     public double getBalance() {
         return this.balance;
     }
 
+    /**
+     * Modifie le solde du compte par celui passé en paramètre.
+     * 
+     * @param balance Le nouveau solde du compte.
+     */
     public void setBalance(double balance) {
         this.balance = balance;
     }
 
+    /**
+     * Permet d'obtenir le taux d'intérêt du compte.
+     * 
+     * @return Le taux d'intérêt du compte.
+     */
     public double getRate() {
         return this.rate;
     }
 
+    /**
+     * Modifie le taux d'intérêt du compte par celui passé en paramètre.
+     * 
+     * @param rate Le nouveau taux d'intérêt du compte.
+     */
     public void setRate(double rate) {
         this.rate = rate;
     }
