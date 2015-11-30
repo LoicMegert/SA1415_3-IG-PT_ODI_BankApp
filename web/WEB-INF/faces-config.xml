@@ -22,6 +22,11 @@
             <from-outcome>createCustomer</from-outcome>
             <to-view-id>/createCustomer.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-action>#{CustomerDetailBean.getCustomer(cust)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/customerDetail.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/createCustomer.xhtml</from-view-id>
@@ -37,6 +42,13 @@
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/createCustomerOk.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>return</from-outcome>
+            <to-view-id>/customersList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/customerDetail.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>return</from-outcome>
             <to-view-id>/customersList.xhtml</to-view-id>
