@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!--
+    Page affichant le formulaire de création d'un nouveau compte.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title><h:outputText value="#{message.createAccountTitle}"/></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="ressources/css/style.css"/>
+    </h:head>
+    <h:body>
+        <h1><h:outputText value="#{message.createAccountTitle}"/></h1>
+        
+        <h:form>
+            <h:panelGrid border="0" columns="2">
+                <h:outputLabel for="id" value="#{message.id} : "/>
+                <h:inputText id="id" value="#{AccountCreateBean.number}" required="true" requiredMessage="#{message.errorNumber}"/>
+                
+                <h:outputLabel for="label" value="#{message.label} : "/>
+                <h:inputText id="label" value="#{AccountCreateBean.name}" required="true" requiredMessage="#{message.errorLabel}"/>
+                
+                <h:outputLabel for="balance" value="#{message.balance} : "/>
+                <h:inputText id="balance" value="#{AccountCreateBean.balance}" required="true" requiredMessage="#{message.errorBalance}"/>
+                
+                <h:outputLabel for="rate" value="#{message.rate} : "/>
+                <h:inputText id="rate" value="#{AccountCreateBean.rate}" required="true" requiredMessage="#{message.errorRate}"/>
+            </h:panelGrid>
+            <br/>
+            <h:commandButton type="reset" id="reset" value="#{message.reset}"/>
+            <h:commandButton type="submit" id="submit" value="#{message.validate}" action="#{AccountCreateBean.submit()}"/>
+            <br/><br/>
+            <h:commandButton id="cancel" value="#{message.cancel}" action="cancel" immediate="true"/>
+            <br/><br/>
+            <h:commandButton id="returnHome" value="#{message.returnHome}" action="returnHome" immediate="true"/>
+            <h:messages styleClass="erreur" showSummary="true" showDetail="false"/>
+        </h:form>
+    </h:body>
+</html>
