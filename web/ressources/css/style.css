@@ -1,0 +1,9 @@
+/* 
+    Created on : 30 nov. 2015, 18:25:02
+    Author     : Loïc Megert
+*/
+
+/* Colore les messages d'erreur en rouge. */
+ul.erreur{
+    color: red;
+}
