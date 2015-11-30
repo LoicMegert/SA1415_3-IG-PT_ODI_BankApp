@@ -1,5 +1,6 @@
 package ch.hearc.ig.odi.bankapp.services;
 
+import ch.hearc.ig.odi.bankapp.business.Account;
 import ch.hearc.ig.odi.bankapp.business.Bank;
 import ch.hearc.ig.odi.bankapp.business.Customer;
 import java.io.Serializable;
@@ -67,5 +68,17 @@ public class Services implements Serializable{
      */
     public List<Customer> getCustomersList(){
         return new ArrayList(getCustomers().values());
+    }
+    
+    /**
+     * Dit à la banque de créer un nouveau compte.
+     * @param number Le numéro unique du compte.
+     * @param name  Le nom du compte.
+     * @param rate  Le taux d'intérêt du compte.
+     * @param customer Le propriétaire du compte.
+     * @return Le compte nouvellement créé.
+     */
+    public Account saveAccount(String number, String name, double rate, Customer customer){
+        return bank.addAccount(number, name, rate, customer);
     }
 }
