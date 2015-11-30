@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+    Page affichant la liste des clients enregistrés auprès d'une banque.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title><h:outputText value="#{message.createCustomer.title}"/></title>
+    </h:head>
+    <h:body>
+        <h1><h:outputText value="#{message.createCustomer.title}"/></h1>
+
+        <h:form>
+            <h:dataTable value="#{CustomersBean.customers}" var="cust">
+                <h:column>
+                    <f:facet name="header"><h:outputText value="#{message.id}"/></f:facet>
+                        #{cust.number}
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="#{message.firstName}"/></f:facet>
+                        #{cust.firstName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="#{message.lastName}"/></f:facet>
+                        #{cust.lastName}
+                </h:column>
+            </h:dataTable>
+            <br/>
+            <h:commandButton id="Add" value="#{message.add}" action="createCustomer"/>
+        </h:form>
+    </h:body>
+</html>
+
