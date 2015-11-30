@@ -53,5 +53,21 @@
             <from-outcome>return</from-outcome>
             <to-view-id>/customersList.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-action>#{AccountDetailBean.getAccount(CustomerDetailBean.customer, acc)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/accountDetail.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/accountDetail.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnToCustomer</from-outcome>
+            <to-view-id>/customerDetail.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/customersList.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 </faces-config>
