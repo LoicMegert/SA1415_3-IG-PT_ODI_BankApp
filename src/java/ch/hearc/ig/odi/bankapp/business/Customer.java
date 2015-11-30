@@ -110,6 +110,15 @@ public class Customer {
     }
 
     /**
+     * Envoie la liste des comptes possédés par ce client.
+     * 
+     * @return La liste des comptes possédés par ce client.
+     */
+    public List<Account> getAccounts() {
+        return new ArrayList<>(this.accounts.values());
+    }
+    
+    /**
      * Ajoute un compte à la liste des comptes du client.
      *
      * @param number Le numéro du compte.
