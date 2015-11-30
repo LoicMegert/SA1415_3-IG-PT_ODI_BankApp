@@ -90,6 +90,15 @@ public class Bank {
     }
 
     /**
+     * Envoie la liste des clients de la banque.
+     * 
+     * @return La liste des clients de la banque.
+     */
+    public Map<Integer, Customer> getCustomers() {
+        return this.customers;
+    }
+    
+    /**
      * Ajoute un client à la banque.
      * 
      * @param number Le numéro du nouveau client.
