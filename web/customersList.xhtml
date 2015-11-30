@@ -26,6 +26,9 @@
                     <f:facet name="header"><h:outputText value="#{message.lastName}"/></f:facet>
                         #{cust.lastName}
                 </h:column>
+                <h:column>
+                    <h:commandLink id="ShowDetailCustomer" value="#{bundle.Show}" action="#{CustomerDetailBean.getCustomer(cust)}"/>
+                </h:column>
             </h:dataTable>
             <br/>
             <h:commandButton id="Add" value="#{message.add}" action="createCustomer"/>
