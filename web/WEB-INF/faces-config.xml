@@ -58,9 +58,41 @@
             <from-outcome>success</from-outcome>
             <to-view-id>/accountDetail.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-action>#{AccountCreateBean.getCustomer(CustomerDetailBean.customer)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>createAccount.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/accountDetail.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnToCustomer</from-outcome>
+            <to-view-id>/customerDetail.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/customersList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/createAccount.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{AccountCreateBean.submit()}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/createAccountOk.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cancel</from-outcome>
+            <to-view-id>/customerDetail.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/customersList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/createAccountOk.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>returnToCustomer</from-outcome>
             <to-view-id>/customerDetail.xhtml</to-view-id>
