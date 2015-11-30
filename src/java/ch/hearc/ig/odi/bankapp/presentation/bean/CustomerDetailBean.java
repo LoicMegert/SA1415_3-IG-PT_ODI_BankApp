@@ -12,7 +12,7 @@ import javax.inject.Named;
  * Cette classe est un Backing Bean lié à la page "customerDetail.xhtml".
  * Elle permet de gérer le client à détailler.
  * 
- * @author Geoffroy Megert <geoffroy.megert@he-arc.ch>
+ * @author Loïc Megert <loic.megert@he-arc.ch>
  */
 @Named("CustomerDetailBean")
 @SessionScoped
