@@ -4,25 +4,25 @@
     Page affichant le formulaire de création d'un nouveau client.
 -->
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title><h:outputText value="#{message.createCustomer.title}"/></title>
+        <title><h:outputText value="#{message.createCustomerTitle}"/></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="ressources/css/style.css"/>
     </h:head>
     <h:body>
-        <h1><h:outputText value="#{message.createCustomer.title}"/></h1>
+        <h1><h:outputText value="#{message.createCustomerTitle}"/></h1>
         
         <h:form id="createCustomer">
             <h:panelGrid border="0" columns="2">
                 <h:outputLabel for="id" value="#{message.id} : "/>
-                <h:inputText id="id" value="#{CustomerCreateBean.id}" required="true" requiredMessage="#{message.error.number}"/>
+                <h:inputText id="id" value="#{CustomerCreateBean.id}" required="true" requiredMessage="#{message.errorNumber}"/>
                 
                 <h:outputLabel for="firstname" value="#{message.firstName} : "/>
-                <h:inputText id="firstname" value="#{CustomerCreateBean.firstName}" required="true" requiredMessage="#{message.error.firstName}"/>
+                <h:inputText id="firstname" value="#{CustomerCreateBean.firstName}" required="true" requiredMessage="#{message.errorFirstName}"/>
                 
                 <h:outputLabel for="lastname" value="#{message.lastName} : "/>
-                <h:inputText id="lastname" value="#{CustomerCreateBean.lastName}" required="true" requiredMessage="#{message.error.lastName}"/>
+                <h:inputText id="lastname" value="#{CustomerCreateBean.lastName}" required="true" requiredMessage="#{message.errorLastName}"/>
             </h:panelGrid>
             <br/>
             <h:commandButton type="reset" id="reset" value="#{message.reset}"/>
