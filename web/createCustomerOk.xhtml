@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!--
+    Cette page affiche le message annonçant la création avec succès d'un nouveau client.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title><h:outputText value="#{message.success}"/></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h1><h:outputText value="#{message.success}"/></h1>
+        
+        <h:outputText value="#{message.customer.message}"/>
+        <br/><br/>
+        <h:form>
+            <h:commandLink value="#{message.return.home}" action="return"/>
+        </h:form>
+    </h:body>
+</html>
