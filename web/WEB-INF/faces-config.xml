@@ -7,14 +7,13 @@
     <application>
         <resource-bundle>
             <base-name>
-                ch.hearc.ig.odi.bankapp.presentation.messages.Messages.properties
+                ch.hearc.ig.odi.bankapp.presentation.messages.Messages
             </base-name>
             <var>message</var>
         </resource-bundle>
         <locale-config>
-            <default-locale>fr></default-locale>
-            <supported-locale>fr></supported-locale>
-            <supported-locale>en></supported-locale>
+            <default-locale>fr</default-locale>
+            <supported-locale>en</supported-locale>
         </locale-config>
     </application>
 </faces-config>
