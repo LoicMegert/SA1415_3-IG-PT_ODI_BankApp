@@ -23,7 +23,7 @@
             <to-view-id>/createCustomer.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-action>#{CustomerDetailBean.getCustomer(cust)}</from-action>
+            <from-action>#{customerDetailBean.getCustomer(cust)}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/customerDetail.xhtml</to-view-id>
         </navigation-case>
@@ -31,7 +31,7 @@
     <navigation-rule>
         <from-view-id>/createCustomer.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{CustomerCreateBean.submit()}</from-action>
+            <from-action>#{customerCreateBean.submit()}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/createCustomerOk.xhtml</to-view-id>
         </navigation-case>
@@ -54,12 +54,12 @@
             <to-view-id>/customersList.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-action>#{AccountDetailBean.getAccount(CustomerDetailBean.customer, acc)}</from-action>
+            <from-action>#{accountDetailBean.getAccount(customerDetailBean.customer, acc)}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/accountDetail.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-action>#{AccountCreateBean.getCustomer(CustomerDetailBean.customer)}</from-action>
+            <from-action>#{accountCreateBean.getCustomer(customerDetailBean.customer)}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>createAccount.xhtml</to-view-id>
         </navigation-case>
@@ -78,7 +78,7 @@
     <navigation-rule>
         <from-view-id>/createAccount.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{AccountCreateBean.submit()}</from-action>
+            <from-action>#{accountCreateBean.submit()}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/createAccountOk.xhtml</to-view-id>
         </navigation-case>

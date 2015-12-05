@@ -14,7 +14,7 @@ import javax.inject.Named;
  *
  * @author Loïc Megert <loic.megert@he-arc.ch>
  */
-@Named("AccountCreateBean")
+@Named(value = "accountCreateBean")
 @SessionScoped
 public class AccountCreateBean implements Serializable {
     

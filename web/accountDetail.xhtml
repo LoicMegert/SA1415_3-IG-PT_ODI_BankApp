@@ -15,19 +15,21 @@
         <h:form>
             <h:panelGrid border="0" columns="2">
                 <h:outputLabel for="id" value="#{message.id} : "/>
-                <h:outputText id="id" value="#{AccountDetailBean.account.number}"/>
+                <h:outputText id="id" value="#{accountDetailBean.account.number}"/>
                 
                 <h:outputLabel for="label" value="#{message.label} : "/>
-                <h:outputText id="label" value="#{AccountDetailBean.account.name}"/>
+                <h:outputText id="label" value="#{accountDetailBean.account.name}"/>
                 
                 <h:outputLabel for="balance" value="#{message.balance} : "/>
-                <h:outputText id="balance" value="#{AccountDetailBean.account.balance}"/>
+                <h:outputText id="balance" value="#{accountDetailBean.account.balance}"/>
                 
                 <h:outputLabel for="rate" value="#{message.rate} : "/>
-                <h:outputText id="rate" value="#{AccountDetailBean.account.rate}"/>
+                <h:outputText id="rate" value="#{accountDetailBean.account.rate}"/>
             </h:panelGrid>
             <br/>
-            <h:commandButton id="returnToCustomer" value="#{message.returnCustomer}" action="returnToCustomer"/><br/><br/>
+            <h:commandButton id="returnToCustomer" value="#{message.returnCustomer}" action="returnToCustomer"/>
+            <br/>
+            <br/>
             <h:commandButton id="returnHome" value="#{message.returnHome}" action="returnHome"/>
         </h:form>
     </h:body>

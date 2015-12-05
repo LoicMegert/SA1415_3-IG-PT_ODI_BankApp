@@ -13,7 +13,7 @@
         <h1><h:outputText value="#{message.customersList}"/></h1>
 
         <h:form>
-            <h:dataTable value="#{CustomersBean.customers}" var="cust">
+            <h:dataTable value="#{customersBean.customers}" var="cust">
                 <h:column>
                     <f:facet name="header"><h:outputText value="#{message.id}"/></f:facet>
                         #{cust.number}
@@ -27,7 +27,7 @@
                         #{cust.lastName}
                 </h:column>
                 <h:column>
-                    <h:commandLink id="ShowDetailCustomer" value="#{message.show}" action="#{CustomerDetailBean.getCustomer(cust)}"/>
+                    <h:commandLink id="ShowDetailCustomer" value="#{message.show}" action="#{customerDetailBean.getCustomer(cust)}"/>
                 </h:column>
             </h:dataTable>
             <br/>

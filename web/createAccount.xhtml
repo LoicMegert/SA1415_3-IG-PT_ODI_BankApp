@@ -16,20 +16,20 @@
         <h:form>
             <h:panelGrid border="0" columns="2">
                 <h:outputLabel for="id" value="#{message.id} : "/>
-                <h:inputText id="id" value="#{AccountCreateBean.number}" required="true" requiredMessage="#{message.errorNumber}"/>
+                <h:inputText id="id" value="#{accountCreateBean.number}" required="true" requiredMessage="#{message.errorNumber}"/>
                 
                 <h:outputLabel for="label" value="#{message.label} : "/>
-                <h:inputText id="label" value="#{AccountCreateBean.name}" required="true" requiredMessage="#{message.errorLabel}"/>
+                <h:inputText id="label" value="#{accountCreateBean.name}" required="true" requiredMessage="#{message.errorLabel}"/>
                 
                 <h:outputLabel for="balance" value="#{message.balance} : "/>
-                <h:inputText id="balance" value="#{AccountCreateBean.balance}" required="true" requiredMessage="#{message.errorBalance}"/>
+                <h:inputText id="balance" value="#{accountCreateBean.balance}" required="true" requiredMessage="#{message.errorBalance}"/>
                 
                 <h:outputLabel for="rate" value="#{message.rate} : "/>
-                <h:inputText id="rate" value="#{AccountCreateBean.rate}" required="true" requiredMessage="#{message.errorRate}"/>
+                <h:inputText id="rate" value="#{accountCreateBean.rate}" required="true" requiredMessage="#{message.errorRate}"/>
             </h:panelGrid>
             <br/>
             <h:commandButton type="reset" id="reset" value="#{message.reset}"/>
-            <h:commandButton type="submit" id="submit" value="#{message.validate}" action="#{AccountCreateBean.submit()}"/>
+            <h:commandButton type="submit" id="submit" value="#{message.validate}" action="#{accountCreateBean.submit()}"/>
             <br/><br/>
             <h:commandButton id="cancel" value="#{message.cancel}" action="cancel" immediate="true"/>
             <br/><br/>

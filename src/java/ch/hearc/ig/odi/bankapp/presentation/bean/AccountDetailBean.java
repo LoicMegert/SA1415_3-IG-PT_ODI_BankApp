@@ -12,7 +12,7 @@ import javax.inject.Named;
  * 
  * @author Loïc Megert <loic.megert@he-arc.ch>
  */
-@Named("AccountDetailBean")
+@Named(value = "accountDetailBean")
 @SessionScoped
 public class AccountDetailBean implements Serializable {
     

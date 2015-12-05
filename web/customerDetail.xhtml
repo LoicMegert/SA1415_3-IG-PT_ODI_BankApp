@@ -16,18 +16,18 @@
         <h:form>
             <h:panelGrid border="0" columns="2">
                 <h:outputLabel for="id" value="#{message.id} : "/>
-                <h:outputText id="id" value="#{CustomerDetailBean.customer.number}"/>
+                <h:outputText id="id" value="#{customerDetailBean.customer.number}"/>
                 
                 <h:outputLabel for="firstname" value="#{message.firstName} : "/>
-                <h:outputText id="firstname" value="#{CustomerDetailBean.customer.firstName}"/>
+                <h:outputText id="firstname" value="#{customerDetailBean.customer.firstName}"/>
                 
                 <h:outputLabel for="lastname" value="#{message.lastName} : "/>
-                <h:outputText id="lastname" value="#{CustomerDetailBean.customer.lastName}"/>
+                <h:outputText id="lastname" value="#{customerDetailBean.customer.lastName}"/>
             </h:panelGrid>
             
             <h2><h:outputText value="#{message.customerAccountsList}"/></h2>
             
-            <h:dataTable value="#{CustomerDetailBean.accounts}" var="acc">
+            <h:dataTable value="#{customerDetailBean.accounts}" var="acc">
                 <h:column>
                     <f:facet name="header"><h:outputText value="#{message.id}"/></f:facet>
                         #{acc.number}
@@ -45,11 +45,11 @@
                         #{acc.rate}
                 </h:column>
                 <h:column>
-                    <h:commandLink value="#{message.show}" action="#{AccountDetailBean.getAccount(CustomerDetailBean.customer, acc)}"/>
+                    <h:commandLink value="#{message.show}" action="#{accountDetailBean.getAccount(customerDetailBean.customer, acc)}"/>
                 </h:column>
             </h:dataTable>
             <br/>
-            <h:commandButton id="Add" value="#{message.add}" action="#{AccountCreateBean.getCustomer(CustomerDetailBean.customer)}"/>
+            <h:commandButton id="Add" value="#{message.add}" action="#{accountCreateBean.getCustomer(customerDetailBean.customer)}"/>
             <br/><br/>
             <h:commandButton id="Return" value="#{message.returnHome}" action="return"/>
         </h:form>

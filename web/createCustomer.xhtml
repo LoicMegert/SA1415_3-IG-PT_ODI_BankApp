@@ -16,17 +16,17 @@
         <h:form id="createCustomer">
             <h:panelGrid border="0" columns="2">
                 <h:outputLabel for="id" value="#{message.id} : "/>
-                <h:inputText id="id" value="#{CustomerCreateBean.id}" required="true" requiredMessage="#{message.errorNumber}"/>
+                <h:inputText id="id" value="#{customerCreateBean.id}" required="true" requiredMessage="#{message.errorNumber}"/>
                 
                 <h:outputLabel for="firstname" value="#{message.firstName} : "/>
-                <h:inputText id="firstname" value="#{CustomerCreateBean.firstName}" required="true" requiredMessage="#{message.errorFirstName}"/>
+                <h:inputText id="firstname" value="#{customerCreateBean.firstName}" required="true" requiredMessage="#{message.errorFirstName}"/>
                 
                 <h:outputLabel for="lastname" value="#{message.lastName} : "/>
-                <h:inputText id="lastname" value="#{CustomerCreateBean.lastName}" required="true" requiredMessage="#{message.errorLastName}"/>
+                <h:inputText id="lastname" value="#{customerCreateBean.lastName}" required="true" requiredMessage="#{message.errorLastName}"/>
             </h:panelGrid>
             <br/>
             <h:commandButton type="reset" id="reset" value="#{message.reset}"/>
-            <h:commandButton type="submit" id="submit" value="#{message.validate}" action="#{CustomerCreateBean.submit()}"/>
+            <h:commandButton type="submit" id="submit" value="#{message.validate}" action="#{customerCreateBean.submit()}"/>
             <br/><br/>
             <h:commandButton id="cancel" value="#{message.cancel}" action="cancel" immediate="true"/>
             <h:messages styleClass="erreur" showSummary="true" showDetail="false"/>
