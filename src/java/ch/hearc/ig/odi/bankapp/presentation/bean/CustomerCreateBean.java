@@ -2,7 +2,7 @@ package ch.hearc.ig.odi.bankapp.presentation.bean;
 
 import ch.hearc.ig.odi.bankapp.services.Services;
 import java.io.Serializable;
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -13,7 +13,7 @@ import javax.inject.Named;
  * @author Loïc Megert <loic.megert@he-arc.ch>
  */
 @Named(value = "customerCreateBean")
-@SessionScoped
+@RequestScoped
 public class CustomerCreateBean implements Serializable {
     
     /** Le numéro du nouveau client. */
